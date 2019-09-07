@@ -108,9 +108,7 @@ module.exports = {
   },
 ```
 
-###### Note: By default, both brotli and zopfli are enabled, while gzip is disabled.
-
-###### Note: To use both zopfli and gzip you will need to set the option gzipBoth to true. Then you will get a .gz file for gzip and a seperate .zopfli.gz file for zopfli.
+###### Note: By default, both brotli and zopfli are enabled, while gzip is disabled. To use both zopfli and gzip you will need to set the option gzipBoth to true. Then you will get a .gz file for gzip and a seperate .zopfli.gz file for zopfli.
 
 **Default options look like this:**
 

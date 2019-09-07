@@ -95,7 +95,7 @@ module.exports = {
 - include: Type: String|RegExp|Array<String|RegExp> Default: undefined. Files to include. example value: /\/includes/
 - exclude: Type: String|RegExp|Array<String|RegExp> Default: undefined. Files to exclude. example value: /\/excludes/
 - minRatio: Type: Number Default: 0.8. Only assets that compress better than this ratio are processed (minRatio = Compressed Size / Original Size). Example: you have image.png file with 1024b size, compressed version of file has 768b size, so minRatio equal 0.75. In other words assets will be processed when the Compressed Size / Original Size value less minRatio value. You can use 1 value to process all assets.
-- deleteOriginalAssets
+- deleteOriginalAssets Type: Boolean Default: false. Whether to delete the original assets or not.
 - cache: Type: Boolean|String Default: false. Enable file caching. The default path to cache directory: node_modules/.cache/compression-webpack-plugin. You can also enable it by setting a path string as such: cache: 'path/to/cache',
 - algorithm: Type: String|Function. The compression algorithm/function.If the input is a string, The algorithm is taken from [zlib](https://nodejs.org/api/zlib.html). If the input is function, then can specify a custom compression function. Use as such:
 ```

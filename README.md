@@ -73,37 +73,40 @@ module.exports = {
 
 ###### Brotli
 
-* filename
-* test
-* compressionOptions
-* threshold
-* minRatio
-* deleteOriginalAssets
-* deleteOriginalAssets
-* cache
-
+- filename: Type: String|Function Default: [path].br[query]. The target asset filename.
+- compressionOptions: Type: Object Default: { level: 11 }. If you use custom function for the algorithm option, the default value is {}. The level option matches BROTLI_PARAM_QUALITY [for Brotli-based streams](https://nodejs.org/api/zlib.html#zlib_for_brotli_based_streams).
+- threshold: Type: Number Default: 10240. Only assets bigger than this size are processed. In bytes.
 
 ###### Zopfli
 
-* filename
-* test
-* compressionOptions
-* threshold
-* minRatio
-* deleteOriginalAssets
-* deleteOriginalAssets
-* cache
+- filename: Type: String|Function Default: [path].gz[query]. The target asset filename.
+- compressionOptions: numiterations: 15, The number of iterations to use with compression. More iterations take longer, but compress better.
+- threshold: Type: Number Default: 8192. Only assets bigger than this size are processed. In bytes.
 
 ###### gzip
 
-* filename
-* test
-* compressionOptions
-* threshold
-* minRatio
-* deleteOriginalAssets
-* deleteOriginalAssets
-* cache
+- filename: Type: String|Function Default: [path].gz[query]. The target asset filename.
+- compressionOptions: Type: Object Default: { level: 9 }. If you use custom function for the algorithm option, the default value is {}. Compression options. You can find all options here [zlib](https://nodejs.org/api/zlib.html#zlib_class_options).
+- threshold: Type: Number Default: 8192. Only assets bigger than this size are processed. In bytes.
+
+###### General
+
+- test: Type: String|RegExp|Array<String|RegExp> Default: /\.(js|css|html|svg|md)\$/ . Test to match files against.
+- include: Type: String|RegExp|Array<String|RegExp> Default: undefined. Files to include. example value: /\/includes/
+- exclude: Type: String|RegExp|Array<String|RegExp> Default: undefined. Files to exclude. example value: /\/excludes/
+- minRatio: Type: Number Default: 0.8. Only assets that compress better than this ratio are processed (minRatio = Compressed Size / Original Size). Example: you have image.png file with 1024b size, compressed version of file has 768b size, so minRatio equal 0.75. In other words assets will be processed when the Compressed Size / Original Size value less minRatio value. You can use 1 value to process all assets.
+- deleteOriginalAssets
+- cache: Type: Boolean|String Default: false. Enable file caching. The default path to cache directory: node_modules/.cache/compression-webpack-plugin. You can also enable it by setting a path string as such: cache: 'path/to/cache',
+- algorithm: Type: String|Function. The compression algorithm/function.If the input is a string, The algorithm is taken from [zlib](https://nodejs.org/api/zlib.html). If the input is function, then can specify a custom compression function. Use as such:
+```
+// String
+ algorithm: 'gzip',
+
+// Function
+ algorithm(input, compressionOptions, callback) {
+    return compressionFunction(input, compressionOptions, callback);
+  },
+```
 
 ###### Note: By default, both brotli and zopfli are enabled, while gzip is disabled.
 

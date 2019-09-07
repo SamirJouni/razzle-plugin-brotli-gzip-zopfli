@@ -17,4 +17,4 @@ A Razzle plugin that allows brotli, gzip, and zopfli(gzip) compression at build-
 
 **Get it on NPM:**
 
-https://www.npmjs.com/package/
+https://www.npmjs.com/package/razzle-plugin-brotli-gzip-zopfli

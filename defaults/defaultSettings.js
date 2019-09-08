@@ -13,7 +13,8 @@ const defaultSettings = {
 		threshold: 8192,
 		minRatio: 0.8,
 		deleteOriginalAssets: false,
-		cache: false
+		cache: false,
+		exclude: /(?:(?:\.map))|(?:(?:server\.js))/,
 	},
 	brotliSettings: {
 		filename: '[path].br[query]',
@@ -23,7 +24,8 @@ const defaultSettings = {
 		threshold: 10240,
 		minRatio: 0.8,
 		deleteOriginalAssets: false,
-		cache: false
+		cache: false,
+		exclude: /(?:(?:\.map))|(?:(?:server\.js))/,
 	},
 	zopfliSettings: {
 		filename: '[path].gz[query]',
@@ -32,6 +34,7 @@ const defaultSettings = {
 		minRatio: 0.8,
 		deleteOriginalAssets: false,
 		cache: false,
+		exclude: /(?:(?:\.map))|(?:(?:server\.js))/,
 		compressionOptions: {
 			numiterations: 15
 		},

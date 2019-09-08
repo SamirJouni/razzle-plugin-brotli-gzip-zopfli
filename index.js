@@ -1,6 +1,6 @@
-const CompressionPlugin = require("compression-webpack-plugin");
-const defaultSettings = require("./defaults/defaultSettings");
-const constructUpdatedObject = require("./src/constructUpdatedObject");
+const CompressionPlugin = require('compression-webpack-plugin');
+const defaultSettings = require('./defaults/defaultSettings');
+const constructUpdatedObject = require('./src/constructUpdatedObject');
 
 const inject = (
 	immutableConfig,
@@ -9,7 +9,7 @@ const inject = (
 	customSettings = {}
 ) => {
 	const isProd = dev === false;
-	const isWeb = target === "web";
+	const isWeb = target === 'web';
 	const config = Object.assign({}, immutableConfig);
 
 	if (isWeb && isProd) {
@@ -27,7 +27,7 @@ const inject = (
 		} = settings;
 
 		if (gzipBoth && gzip && zopfli) {
-			zopfliSettings.filename = "[path].zopfli.gz[query]";
+			zopfliSettings.filename = '[path].zopfli.gz[query]';
 		} else if (!gzipBoth && gzip && zopfli) {
 			gzip = false;
 		}

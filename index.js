@@ -9,10 +9,9 @@ const inject = (
 	customSettings = {}
 ) => {
 	const isProd = dev === false;
-	const isWeb = target === 'web';
 	const config = Object.assign({}, immutableConfig);
 
-	if (isWeb && isProd) {
+	if (isProd) {
 		const settings = constructUpdatedObject(defaultSettings, customSettings);
 
 		const plugins = [];

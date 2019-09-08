@@ -1,5 +1,4 @@
 const CompressionPlugin = require("compression-webpack-plugin");
-const zopfli = require("@gfx/zopfli");
 const defaultSettings = require("./defaults/defaultSettings");
 const constructUpdatedObject = require("./src/constructUpdatedObject");
 

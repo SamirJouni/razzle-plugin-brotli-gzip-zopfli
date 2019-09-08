@@ -1,3 +1,5 @@
+const zopfli = require("@gfx/zopfli");
+
 const defaultSettings = {
 	brotli: true,
 	gzip: false,

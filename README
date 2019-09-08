@@ -18,7 +18,8 @@ module.exports = {
 
 ##### More Options
 
-    To get more options, do the following in your razzle.config.js file. Then add/remove/change options as needed.
+To get more options, do the following in your razzle.config.js file.
+Then add/remove/change options as needed.
 
 ```
 // razzle.config.js
@@ -154,5 +155,5 @@ module.exports = {
 ```
 
 ###### Note: This app is heavily inspired by [razzle-pulgin-compression](https://www.npmjs.com/package/razzle-plugin-compression)
-
+###### Note: This app uses code from a stackoverflow answer by [bloodyKnuckles](https://stackoverflow.com/users/2743458/bloodyknuckles)
 ###### Note: This app uses [compression-webpack-plugin](https://www.npmjs.com/package/compression-webpack-plugin). Go there to find more options if the ones outlined in this readme aren't enough.

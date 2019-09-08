@@ -160,5 +160,5 @@ module.exports = {
 https://www.npmjs.com/package/razzle-plugin-brotli-gzip-zopfli
 
 ###### Note: This app is heavily inspired by [razzle-pulgin-compression](https://github.com/nimacsoft/razzle-plugin-compression)
-
+###### Note: This app uses code from a stackoverflow answer by [bloodyKnuckles](https://stackoverflow.com/users/2743458/bloodyknuckles)
 ###### Note: This app uses [compression-webpack-plugin](https://github.com/webpack-contrib/compression-webpack-plugin). Go there to find more options if the ones outlined in this readme aren't enough.

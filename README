@@ -4,6 +4,11 @@ A razzle plugin that allows brotli, gzip, and zopfli(gzip) compression at build-
 
 **How To Use:**
 
+```
+npm i --save-dev razzle-plugin-brotli-gzip-zopfli
+```
+then,
+
 ##### Basic Usage
 
 Create a razzle.config.js at the root directory of your razzle project. Then paste this in the file.

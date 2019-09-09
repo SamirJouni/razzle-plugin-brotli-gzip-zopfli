@@ -9,6 +9,7 @@ A razzle plugin that allows brotli, gzip, and zopfli(gzip) compression at build-
 ```
 npm i --save-dev razzle-plugin-brotli-gzip-zopfli
 ```
+
 then,
 
 ##### Basic Usage
@@ -103,6 +104,7 @@ module.exports = {
 - deleteOriginalAssets Type: Boolean Default: false. Whether to delete the original assets or not.
 - cache: Type: Boolean|String Default: false. Enable file caching. The default path to cache directory: node_modules/.cache/compression-webpack-plugin. You can also enable it by setting a path string as such: cache: 'path/to/cache',
 - algorithm: Type: String|Function. The compression algorithm/function.If the input is a string, The algorithm is taken from [zlib](https://nodejs.org/api/zlib.html). If the input is function, then can specify a custom compression function. Use as such:
+
 ```
 // String
  algorithm: 'gzip',
@@ -124,37 +126,40 @@ module.exports = {
 	zopfli: true,
 	gzipBoth: false,
 	gzipSettings: {
-		filename: "[path].gz[query]",
-		algorithm: "gzip",
+		filename: '[path].gz[query]',
+		algorithm: 'gzip',
 		test: /\.(js|css|html|svg|md)$/,
 		compressionOptions: { level: 9 },
 		threshold: 8192,
 		minRatio: 0.8,
 		deleteOriginalAssets: false,
-		cache: false
+		cache: false,
+		exclude: /(?:(?:\.map))|(?:(?:server\.js))/,
 	},
 	brotliSettings: {
-		filename: "[path].br[query]",
-		algorithm: "brotliCompress",
+		filename: '[path].br[query]',
+		algorithm: 'brotliCompress',
 		test: /\.(js|css|html|svg|md)$/,
 		compressionOptions: { level: 11 },
 		threshold: 10240,
 		minRatio: 0.8,
 		deleteOriginalAssets: false,
-		cache: false
+		cache: false,
+		exclude: /(?:(?:\.map))|(?:(?:server\.js))/,
 	},
 	zopfliSettings: {
-		filename: "[path].gz[query]",
+		filename: '[path].gz[query]',
 		test: /\.(js|css|html|svg|md)$/,
 		threshold: 8192,
 		minRatio: 0.8,
 		deleteOriginalAssets: false,
 		cache: false,
+		exclude: /(?:(?:\.map))|(?:(?:server\.js))/,
 		compressionOptions: {
 			numiterations: 15
 		},
 		algorithm(input, compressionOptions, callback) {
-			return zopfli.gzip(input, compressionOptions, callback);
+			return zopfli(input, compressionOptions, callback);
 		}
 	}
 };
@@ -165,5 +170,7 @@ module.exports = {
 https://www.npmjs.com/package/razzle-plugin-brotli-gzip-zopfli
 
 ###### Note: This app is heavily inspired by [razzle-pulgin-compression](https://github.com/nimacsoft/razzle-plugin-compression)
+
 ###### Note: This app uses code from a stackoverflow answer by [bloodyKnuckles](https://stackoverflow.com/users/2743458/bloodyknuckles)
+
 ###### Note: This app uses [compression-webpack-plugin](https://github.com/webpack-contrib/compression-webpack-plugin). Go there to find more options if the ones outlined in this readme aren't enough.

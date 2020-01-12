@@ -1,5 +1,3 @@
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/SamirJouni)
-
 # razzle-plugin-brotli-gzip-zopfli
 
 A razzle plugin that allows brotli, gzip, and zopfli(gzip) compression at build-time.

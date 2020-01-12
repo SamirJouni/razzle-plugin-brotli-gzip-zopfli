@@ -1,5 +1,4 @@
 [![npm version](https://badge.fury.io/js/razzle-plugin-brotli-gzip-zopfli.svg)](https://badge.fury.io/js/razzle-plugin-brotli-gzip-zopfli)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/SamirJouni)
 
 # razzle-plugin-brotli-gzip-zopfli
 

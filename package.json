@@ -1,6 +1,6 @@
 {
   "name": "razzle-plugin-brotli-gzip-zopfli",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "description": "A plugin that allows razzle to compress files to br and gz during build",
   "main": "./build/main.js",
   "author": "Samir Jouni <contact@samirjouni.com> (https://samirjouni.com)",
@@ -26,8 +26,8 @@
     "webpack": "^4.41.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.0",
-    "@babel/preset-env": "^7.8.2",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
     "babel-loader": "^8.0.6",
     "webpack-cli": "^3.3.10"
   },
